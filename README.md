@@ -15,9 +15,7 @@ VUE + Koa2 开发一款全栈小程序 实战练习
 [mpvue README](./README-mpvue.md)
 
 ### 环境搭建
-[后台地址](https://mp.weixin.qq.com)
-
-[文档地址](https://developers.weixin.qq.com/miniprogram/dev/index.html)
+[微信公众平台地址](https://mp.weixin.qq.com)
 
 [开发工具下载地址](https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html)
 
@@ -26,13 +24,13 @@ VUE + Koa2 开发一款全栈小程序 实战练习
 
 [mpvue Github 地址](https://github.com/Meituan-Dianping/mpvue)
 
-[vue](https://cn.vuejs.org/v2/guide/)
+[vue 开发文档官网](https://cn.vuejs.org/v2/guide/)
 
 [微信小程序](https://developers.weixin.qq.com/miniprogram/dev/index.html)
 
 ---
 
-1. 初始化项目
+##### 1. 初始化项目
 
 ```js
 sudo npm install -g vue-cli
@@ -73,7 +71,7 @@ Error: listen EADDRNOTAVAIL 10.3.51.12:8080
     at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:97:10)
 ```
 
-2. Koa 入门认识
+##### 2. Koa 入门认识
 
 基于 nodejs 平台的下一代 web 开发框架
 
@@ -93,7 +91,7 @@ app.use(async (ctx, next) => {
 app.listen(9092);
 ```
 
-3. 开通腾讯云后台
+##### 3. 开通腾讯云后台
 
 `前提概要`开通腾讯云提供了小程序全栈一体化的好处，解决方案是 koa2 + mysql + wafer + sdk, 集成微信开发工具一键上传部署, 调试免费域名+环境。
 
@@ -121,14 +119,16 @@ app.listen(9092);
 4. 另外推荐使用左上的`云开发`图形界面
 5. [参考解决地址](https://www.jianshu.com/p/5dd5c2d885ec)
 
-4. 安装 mysql
+##### 4. 安装 mysql
 
 [如何在Macbook上安装MySQL - 百度经验](https://jingyan.baidu.com/article/fa4125ac0e3c2928ac709204.html)
 [MySQL 新手安装教程（windows版) - 腾讯云](https://cloud.tencent.com/developer/article/1359123)
 
-5. 启动 mysql，你会发现总要去原始目录去进入 mysql，输入很长一串 `/usr/local/mysql/bin/mysql -u root -p` 这样的命令，所以做个 alias 来扩大 mysql 命令的使用范围。
+##### 5. 启动 mysql，
 
-提前说一下，你可以试试 ‘npm install mysql’，因为我当时是手动下载安装的 mysql 工具，所以很多需要自己去配置。
+你会发现总要去原始目录去进入 mysql，输入很长一串 `/usr/local/mysql/bin/mysql -u root -p` 这样的命令，所以做个 alias 来扩大 mysql 命令的使用范围。
+
+`提前说一下`，你可以试试 ‘npm install mysql’，因为我当时是手动下载安装的 mysql 工具，所以很多需要自己去配置。
 
 ```
 // 1. 打开文件
