@@ -1,7 +1,11 @@
 <script>
+import { get } from './utils';
+
 export default {
-  created() {
-    console.log('小程序启动了');
+  async created() {
+    const res = await get('/weapp/demo');
+
+    console.log('小程序启动了', res);
   }
 }
 </script>

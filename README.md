@@ -119,6 +119,8 @@ app.listen(9092);
 4. 另外推荐使用左上的`云开发`图形界面
 5. [参考解决地址](https://www.jianshu.com/p/5dd5c2d885ec)
 
+`Surprise` 2019-04-26 找到了官方提供的开通腾讯云的步骤. 请直接戳[快速通道-腾讯云支持](https://developers.weixin.qq.com/miniprogram/dev/qcloud/qcloud.html#%E4%BB%8B%E7%BB%8D)
+
 ##### 4. 安装 mysql
 
 `提前说一下`，你可以试试 ‘npm install mysql’，因为我当时是手动下载安装的 mysql 工具，所以很多需要自己去配置。
@@ -161,3 +163,5 @@ sudo vim /etc/my.cnf
 ##### 6. 报错：Page is not constructed because it is not found.
 
 解决方法，手动删除根目录的 'dist' 文件夹，重新执行 'npm run dev' 即可。
+
+##### 7. 2019-04-26 经查找腾讯云的单步调试有安全隐患，被官方停用了
