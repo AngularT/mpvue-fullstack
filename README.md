@@ -121,14 +121,15 @@ app.listen(9092);
 
 ##### 4. 安装 mysql
 
+`提前说一下`，你可以试试 ‘npm install mysql’，因为我当时是手动下载安装的 mysql 工具，所以很多需要自己去配置。
+
 [如何在Macbook上安装MySQL - 百度经验](https://jingyan.baidu.com/article/fa4125ac0e3c2928ac709204.html)
+
 [MySQL 新手安装教程（windows版) - 腾讯云](https://cloud.tencent.com/developer/article/1359123)
 
 ##### 5. 启动 mysql，
 
 你会发现总要去原始目录去进入 mysql，输入很长一串 `/usr/local/mysql/bin/mysql -u root -p` 这样的命令，所以做个 alias 来扩大 mysql 命令的使用范围。
-
-`提前说一下`，你可以试试 ‘npm install mysql’，因为我当时是手动下载安装的 mysql 工具，所以很多需要自己去配置。
 
 ```
 // 1. 打开文件
@@ -145,7 +146,7 @@ source ~/.bash_profile
 
 ```
 // 1. 关闭 mysql
-// 2. 打开并创建一个 my.cnf 的文件
+// 2. 打开并创建一个 my.cnf 的文件
 sudo vim /etc/my.cnf
 // 3. 全部复制以下链接内的文本
 // https://www.jianshu.com/p/90b5a749b3b0
@@ -156,3 +157,7 @@ sudo vim /etc/my.cnf
 // 6. 随意文件夹下，输入 mysql -u root -p 
 // 7. 此时提示说需要输入密码，在这里直接按 enter 回车即可进入 mysql
 ```
+
+##### 6. 报错：Page is not constructed because it is not found.
+
+解决方法，手动删除根目录的 'dist' 文件夹，重新执行 'npm run dev' 即可。
