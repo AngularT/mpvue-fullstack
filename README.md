@@ -2,17 +2,21 @@ VUE + Koa2 开发一款全栈小程序 实战练习
 
 内容包括：个人中心、图书列表、图书详情、图书评论、个人评论列表
 
-技术栈：小程序、Vuejs、koa2、koa-router、mysql
+技术栈：小程序、Vuejs、koa2、koa-router、mysql（腾讯云）
 
 2019-04-09
 
 ---
 
+### qCloud & Mpvue 常见操作辅助参考
+
+[qCloud README](./README-qCloud.md)
+[mpvue README](./README-mpvue.md)
+
 ### 环境搭建
 [后台地址](https://mp.weixin.qq.com)
 [文档地址](https://developers.weixin.qq.com/miniprogram/dev/index.html)
 [开发工具下载地址](https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html)
-
 
 ### 官方文档
 [mpvue 官网](http://mpvue.com/)
@@ -110,3 +114,39 @@ app.listen(9092);
 3.勾选`腾讯云`即可
 4.另外推荐使用左上的`云开发`图形界面
 5.[参考解决地址](https://www.jianshu.com/p/5dd5c2d885ec)
+
+4. 安装 mysql
+
+[如何在Macbook上安装MySQL - 百度经验](https://jingyan.baidu.com/article/fa4125ac0e3c2928ac709204.html)
+[MySQL 新手安装教程（windows版) - 腾讯云](https://cloud.tencent.com/developer/article/1359123)
+
+5. 启动 mysql，你会发现总要去原始目录去进入 mysql，输入很长一串 `/usr/local/mysql/bin/mysql -u root -p` 这样的命令，所以做个 alias 来扩大 mysql 命令的使用范围。
+
+提前说一下，你可以试试 ‘npm install mysql’，因为我当时是手动下载安装的 mysql 工具，所以很多需要自己去配置。
+
+```
+// 1. 打开文件
+vim ~/.bash_profile
+// 2. 在打开的 .bash_profile 中写入
+alias mysql='/usr/local/mysql/bin/mysql';
+// 3. 生效
+source ~/.bash_profile
+```
+
+`遇到问题` ERROR 1045 (28000): Access denied for user 'root'@'localhost' (using password: NO)
+
+我们可以重置密码来或者忽略登录密码来解决以上的问题。（这里是 mac 的使用方法）[参考链接](https://www.jianshu.com/p/628bcf8bb557)
+
+```
+// 1. 关闭 mysql
+// 2. 打开并创建一个 my.cnf 的文件
+sudo vim /etc/my.cnf
+// 3. 全部复制以下链接内的文本
+// https://www.jianshu.com/p/90b5a749b3b0
+// 复制的同时找到 [mysqld] 的位置加入一句以下的命令，
+// skip-grant-tables
+// 4. 退出，保存
+// 5. 启动mysql
+// 6. 随意文件夹下，输入 mysql -u root -p 
+// 7. 此时提示说需要输入密码，在这里直接按 enter 回车即可进入 mysql
+```
