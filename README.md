@@ -47,7 +47,7 @@ npm run dev
 ```js
 ? Project name vue-demo
 ? Project description A Vue.js project
-? Author zhenzhen lin <linzhenzhen@smartisan.com>
+? Author zhenzhen lin <mslinzz@sina.com>
 ? Vue build standalone
 ? Install vue-router? No
 ? Use ESLint to lint your code? Yes
@@ -131,7 +131,7 @@ app.listen(9092);
 
 ##### 5. 启动 mysql，
 
-你会发现总要去原始目录去进入 mysql，输入很长一串 `/usr/local/mysql/bin/mysql -u root -p` 这样的命令，所以做个 alias 来扩大 mysql 命令的使用范围。
+你会发现总要去原始目录去进入 mysql，或者输入很长一串 `/usr/local/mysql/bin/mysql -u root -p` 这样的命令，所以做个 alias 来扩大 mysql 命令的使用范围。
 
 ```
 // 1. 打开文件
@@ -165,3 +165,9 @@ sudo vim /etc/my.cnf
 解决方法，手动删除根目录的 'dist' 文件夹，重新执行 'npm run dev' 即可。
 
 ##### 7. 2019-04-26 经查找腾讯云的单步调试有安全隐患，被官方停用了
+
+##### 8. 执行 'node ./server/tools/initdb.js' 报错：Unhandled rejection Error: Error: connect ECONNREFUSED 127.0.0.1:3306
+
+解决办法，修改 './server/config.js' 中 mysql host 配置 5757
+
+##### 9. 执行 'node ./server/tools/initdb.js' 报错：
